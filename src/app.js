@@ -18,7 +18,7 @@ app.get('/api/v1/names/:id',(req,res)=>{
        return res.status(404).send({"status": "failed", "message": "Not found!"});
     }
      return res.status(200)
-    .send({"status": "success","message": "Product name fetched successfully", "data": {product}});
+    .send({"status": "success","message": "Product name fetched successfully", "name" : {"id": id, "name": product }});
 })
 
 // GET endpoint for sending the products to client by id
